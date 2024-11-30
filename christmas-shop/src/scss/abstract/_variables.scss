@@ -11,6 +11,19 @@
   --color-scheme: light dark;
 
   // Colors
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
+  --primary-color: #ff4646;
+  --primary-10-color: rgba(255, 70, 70, 0.1);
+
+  --dark-color: #181c29;
+
+  --static-white-color: #fff;
+  --static-white-40-color: rgba(255, 255, 255, 0.4);
+  --static-white-20-color: rgba(255, 255, 255, 0.2);
+
+  --tag-purple-color: #ff43f7;
+  --tag-pink-color: #4361ff;
+  --tag-green-color: #06a44f;
+
+  --content-background-color: #ecf3f8;
+  --overlay-color: rgba(24, 28, 41, 0.8);
 }
