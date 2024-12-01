@@ -1,0 +1,58 @@
+@use "../../base/typography" as *;
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 8px;
+
+  height: 648px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  max-width: 1276px;
+  height: 528px;
+
+  background: var(--static-white-color);
+  border-radius: 20px;
+}
+
+.about__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 60px;
+  gap: 20px;
+
+  width: 50%;
+}
+
+.about__info__cursive {
+  @include caption-font;
+  color: var(--primary-color);
+}
+
+.about__info h2 {
+  color: var(--dark-color);
+}
+
+.about__info p {
+  color: var(--dark-color);
+}
+
+.about>img {
+  display: block;
+
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 20px;
+}
