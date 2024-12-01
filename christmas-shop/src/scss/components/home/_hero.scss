@@ -1,0 +1,45 @@
+@use "../../base/typography" as *;
+
+.hero-container {
+  height: 524px;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-items: center;
+
+  color: var(--static-white-color);
+
+  padding: 0 60px;
+
+  gap: 12px;
+}
+
+.hero__cursive {
+  @include caption-font;
+}
+
+.hero__heading {
+  text-align: center;
+}
+
+.hero__link {
+  @include action-small-font;
+
+  width: 232px;
+
+  padding: 20px 32px;
+
+  background-color: var(--dark-color);
+  color: var(--static-white-color);
+
+  border-radius: 20px;
+
+  text-align: center;
+}
