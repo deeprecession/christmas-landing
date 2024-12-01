@@ -1,0 +1,60 @@
+@use "../base/typography" as *;
+
+.main-header {
+  width: 100%;
+
+  padding: 12px 8%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  background-color: var(--static-white-color);
+  @include action-small-font;
+}
+
+.main-header nav {
+  width: 100%;
+}
+
+.main-header ul {
+  list-style: none;
+  flex-grow: 1;
+  width: 100%;
+
+  gap: 8px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.main-header ul li {
+  display: inline-block;
+  padding: 0 12px;
+
+  a {
+    color: var(--dark-color);
+    text-decoration: none;
+  }
+}
+
+.main-header__titled-logo {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 0;
+  align-items: center;
+
+  gap: 8px;
+  padding: 8px 20px;
+  border: 1px solid #000000;
+  border-radius: 12px;
+
+  text-wrap: nowrap;
+  cursor: pointer;
+
+  text-align: center;
+}
