@@ -28,6 +28,11 @@ p {
   line-height: 148%;
 }
 
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
 @mixin action-lagre-font {
   @include heading-styles(24px, 152%, 16%);
 }
