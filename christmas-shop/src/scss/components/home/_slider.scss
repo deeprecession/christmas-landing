@@ -7,6 +7,7 @@
   align-items: center;
 
   max-width: 1276px;
+  width: 100%;
 
   padding: 0;
   gap: 20px;
@@ -35,16 +36,12 @@
   display: flex;
   text-align: center;
   flex-flow: row nowrap;
-  justify-content: flex-start;
   align-items: center;
 
   gap: 20px;
 
+  width: 100%;
   max-width: 1278px;
-
-  padding: 0px;
-
-  height: 200px;
 }
 
 .slider__text {
