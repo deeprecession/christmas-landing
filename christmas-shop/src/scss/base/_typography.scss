@@ -49,6 +49,10 @@ a {
   letter-spacing: 0.05rem;
 }
 
+i {
+  @include caption-font;
+}
+
 @mixin slider-text-font {
   text-transform: uppercase;
   font-size: 80px;
