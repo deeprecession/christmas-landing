@@ -7,19 +7,19 @@
 }
 
 h1 {
-  @include heading-styles(32px, 150%, 18%);
+  @include heading-styles(32px, 150%, 0.18rem);
 }
 
 h2 {
-  @include heading-styles(24px, 152%, 16%);
+  @include heading-styles(24px, 152%, 0.16rem);
 }
 
 h3 {
-  @include heading-styles(16px, 152%, 8%);
+  @include heading-styles(16px, 152%, 0.08rem);
 }
 
 h4 {
-  @include heading-styles(12px, 130%, 5%);
+  @include heading-styles(12px, 130%, 0.05rem);
 }
 
 p {
@@ -34,11 +34,11 @@ a {
 }
 
 @mixin action-lagre-font {
-  @include heading-styles(24px, 152%, 16%);
+  @include heading-styles(24px, 152%, 0.16rem);
 }
 
 @mixin action-small-font {
-  @include heading-styles(12px, 130%, 5%);
+  @include heading-styles(12px, 130%, 0.05rem);
 }
 
 @mixin caption-font {
@@ -46,7 +46,7 @@ a {
   font-size: 24px;
   font-weight: var(--font-weight-regular);
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05rem;
 }
 
 @mixin slider-text-font {
