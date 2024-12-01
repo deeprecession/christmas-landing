@@ -1,0 +1,21 @@
+.gifts-page {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/bg-garland.png");
+  background-size: 100%;
+  background-position: top;
+}
+
+.gifts-page__main-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
