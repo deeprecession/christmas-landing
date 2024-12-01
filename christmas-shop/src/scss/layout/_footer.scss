@@ -1,0 +1,66 @@
+@use "../base/typography" as *;
+
+.main-footer {
+  background-color: #fff;
+
+  height: 496px;
+  width: 100%;
+
+  gap: 60px;
+
+  padding: 60px 8px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.contact-cards-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.contact-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 417px;
+  height: 204px;
+
+  padding: 20px;
+
+  gap: 12px;
+
+  border-radius: 20px;
+
+  background-color: var(--content-background-color);
+}
+
+.contact-card__title {
+  @include action-lagre-font;
+}
+
+.main-footer__footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.main-footer__social-media {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
