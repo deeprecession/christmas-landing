@@ -1,0 +1,86 @@
+@use "../../base/typography" as *;
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1276px;
+
+  padding: 0;
+  gap: 20px;
+
+  height: 488px;
+
+  color: var(--static-white-color);
+}
+
+.slider-container__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  text-align: center;
+}
+
+.slider-container__text i {
+  display: block;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  text-align: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 20px;
+
+  max-width: 1278px;
+
+  padding: 0px;
+
+  height: 200px;
+}
+
+.slider__text {
+  @include slider-text-font;
+}
+
+.slider img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.slider-container__control-panel {
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1276px;
+}
+
+.slider-container__control-panel button {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--static-white-color);
+  border-radius: 20px;
+
+  color: var(--static-white-color);
+  background-color: transparent;
+}
