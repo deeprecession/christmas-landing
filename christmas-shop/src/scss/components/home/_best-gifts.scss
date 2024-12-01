@@ -1,0 +1,42 @@
+.best-gifts-container {
+  max-width: 1276px;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 0;
+
+  color: #fff;
+
+  gap: 20px;
+
+  text-align: center;
+
+  container-name: best-gifts-container;
+  container-type: inline-size;
+}
+
+.best-gifts {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+@container best-gifts-container (width < 1276px) {
+  .best-gifts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container best-gifts-container (width < 635px) {
+  .best-gifts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
