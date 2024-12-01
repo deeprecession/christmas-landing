@@ -4,8 +4,8 @@
   height: 524px;
 
   display: flex;
-  align-items: center;
-  justify-items: center;
+  justify-content: center;
+  padding-top: 100px;
 }
 
 .hero {
@@ -27,6 +27,7 @@
 
 .hero__heading {
   text-align: center;
+  margin: 0;
 }
 
 .hero__link {
@@ -42,4 +43,5 @@
   border-radius: 20px;
 
   text-align: center;
+  text-wrap: nowrap;
 }
