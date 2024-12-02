@@ -12,4 +12,12 @@ export const addScrollUpButtonEventListener = () => {
 			button.style.display = "none";
 		}
 	});
+
+	window.addEventListener("resize", () => {
+		if (window.innerWidth < 768 && window.scrollY > 300) {
+			button.style.display = "block";
+		} else {
+			button.style.display = "none";
+		}
+	});
 };
