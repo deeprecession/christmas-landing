@@ -2,6 +2,7 @@ import "./scss/main.scss";
 import { addEventListenersToFilters } from "./utils/giftFilters";
 import { loadAllGifts } from "./utils/loadAllGifts";
 import { resetRandomGiftsComponent } from "./utils/randomGifts";
+import { addScrollUpButtonEventListener } from "./utils/scrollUpButton";
 import { startCTATimer } from "./utils/timer";
 
 if (
@@ -18,4 +19,5 @@ if (
 ) {
 	loadAllGifts();
 	addEventListenersToFilters();
+	addScrollUpButtonEventListener();
 }
