@@ -20,15 +20,32 @@
 
 <body>
   <div class="gifts-page">
-    <header class="main-header" id="main-header">
-      <a href="/">
-        <div class="main-header__titled-logo">
-          <img width="24" height="24" src="/logo.png" alt="logo" />
-          <div>The Gifts</div>
-        </div>
-      </a>
+    <div id="burger-menu-container" class="burger-menu-container">
+      <header class="main-header" id="main-header">
+        <a href="/" class="main-header__logo">
+          <div class="main-header__titled-logo">
+            <img width="24" height="24" src="/logo.png" alt="logo" />
+            <div>The Gifts</div>
+          </div>
+        </a>
 
-      <nav class="main-header__site-navigation" id="header-nav">
+        <nav class="main-header__site-navigation" id="header-nav">
+          <ul>
+            <li><a href="/gifts">Gifts</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#random-gifts">Best</a></li>
+            <li><a href="#gift-contacts">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <button class="main-header__burger-menu-btn" id="burger-menu-btn" aria-label="Toggle menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </header>
+
+      <nav class="burger-menu__site-navigation" id="burger-menu">
         <ul>
           <li><a href="/gifts">Gifts</a></li>
           <li><a href="/#about">About</a></li>
@@ -36,15 +53,7 @@
           <li><a href="#gift-contacts">Contacts</a></li>
         </ul>
       </nav>
-
-      <button class="main-header__burger-menu-open-btn" id="open-burger-btn">
-        <img width="40" height="40" src="/burger-btn.png" alt="-" />
-      </button>
-
-      <button class="main-header__burger-menu-close-btn" id="close-burger-btn">
-        <img width="40" height="40" src="/close.png" alt="X" />
-      </button>
-    </header>
+    </div>
 
     <main class="gifts-page__main-content">
       <header>

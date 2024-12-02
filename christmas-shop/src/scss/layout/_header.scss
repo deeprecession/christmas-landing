@@ -1,104 +1,175 @@
 @use "../base/typography" as *;
 
+.burger-menu-container {
+  @include action-small-font;
+
+  background-color: #fff;
+
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.burger-menu-container-extended {
+  @export .burger-menu-container;
+
+  height: 100vh;
+  position: fixed;
+}
+
 .main-header {
   width: 100%;
-
   padding: 12px 8%;
-
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-
-  gap: 12px;
-
   background-color: var(--static-white-color);
-  @include action-small-font;
 }
 
-.main-header-burger-unwrapped {
-  position: fixed;
-  height: 100vh;
-  top: 0;
-  left: 0;
-
-  flex-flow: column nowrap;
-
-  @extend .main-header;
-
-  .main-header__titled-logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-  }
-
-  .main-header__burger-menu-close-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-  }
-}
-
-.main-header__default-nav>ul {
-  width: 100%;
-}
-
-.main-header__burger-nav,
-.main-header__burger-nav>ul {
-  @include action-lagre-font;
-
-  width: 100%;
-  height: 100%;
-
-  padding: 0;
-
-  gap: 8px;
-
+.main-header__logo {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
-}
-
-.main-header ul li {
-  display: inline-block;
-  padding: 0 12px;
+  gap: 8px;
 }
 
 .main-header__titled-logo {
   display: flex;
-  flex-flow: row nowrap;
-  flex-grow: 0;
   align-items: center;
-
   gap: 8px;
   padding: 8px 20px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   border-radius: 12px;
-
-  text-wrap: nowrap;
   cursor: pointer;
-
-  text-align: center;
 }
 
-.main-header__burger-menu-close-btn,
-.main-header__burger-menu-open-btn {
+.main-header__site-navigation {
   display: flex;
+
+  ul {
+    display: flex;
+    gap: 16px;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.main-header__burger-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.burger-line:nth-child(1) {
+  top: 8px;
+}
+
+.burger-line:nth-child(2) {
+  display: none;
+}
+
+.burger-line:nth-child(3) {
+  top: 28px;
+}
+
+.burger-menu__site-navigation {
+  display: none;
+
+  height: 100%;
+
+  background-color: #fff;
 
   justify-content: center;
   align-items: center;
 
-  padding: 0;
-  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0;
 
-  isolation: isolate;
-  border: none;
+  transform: translateX(-100%);
+  transition:
+    transform 0.3s ease,
+    width 0.3s ease;
 
-  background-color: transparent;
+  ul {
+    margin: 0;
+    padding: 0;
 
-  width: 40px;
-  height: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
 
-  cursor: pointer;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 20px 12px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.burger-menu__site-navigation-opened {
+  @extend .burger-menu__site-navigation;
+  display: flex;
+
+  width: 100%;
+
+  transform: translateX(0);
+  /* Slide the menu into view */
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .main-header {
+    .main-header__site-navigation {
+      display: none;
+    }
+
+    .main-header__burger-menu-btn {
+      display: block;
+    }
+
+    &.menu-opened {
+      .main-header__site-navigation {
+        display: flex;
+      }
+
+      .burger-line:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      .burger-line:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
 }
