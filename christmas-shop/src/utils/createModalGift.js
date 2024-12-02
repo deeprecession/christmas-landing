@@ -3,6 +3,16 @@ export const showGiftModal = (gift) => {
 	document.body.appendChild(modal);
 };
 
+const disalowScroll = () => {
+	document.body.style.overflow = "hidden";
+	document.body.style.touchAction = "none";
+};
+
+const allowScroll = () => {
+	document.body.style.overflow = "visible";
+	document.body.style.touchAction = "auto";
+};
+
 const createOverlay = () => {
 	const overlay = document.createElement("div");
 	overlay.classList.add("overlay");
@@ -15,6 +25,8 @@ const createOverlay = () => {
 };
 
 const createGiftModal = (gift) => {
+	disalowScroll();
+
 	const modalGift = document.createElement("div");
 	modalGift.classList.add("modal-gift");
 
@@ -31,9 +43,11 @@ const createGiftModal = (gift) => {
 
 	overlay.addEventListener("click", () => {
 		modalGift.remove();
+		allowScroll();
 	});
 	closeButton.addEventListener("click", () => {
 		overlay.remove();
+		allowScroll();
 	});
 
 	return modalGift;
