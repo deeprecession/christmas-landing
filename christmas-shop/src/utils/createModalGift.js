@@ -1,16 +1,8 @@
+import { allowScroll, disalowScroll } from "./pageScrollUtils";
+
 export const showGiftModal = (gift) => {
 	const modal = createGiftModal(gift);
 	document.body.appendChild(modal);
-};
-
-const disalowScroll = () => {
-	document.body.style.overflow = "hidden";
-	document.body.style.touchAction = "none";
-};
-
-const allowScroll = () => {
-	document.body.style.overflow = "visible";
-	document.body.style.touchAction = "auto";
 };
 
 const createOverlay = () => {

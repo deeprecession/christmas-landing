@@ -1,4 +1,5 @@
 import "./scss/main.scss";
+import { addBurgerMenuBtnEventListener } from "./utils/burgerMenu";
 import { addEventListenersToFilters } from "./utils/giftFilters";
 import { loadAllGifts } from "./utils/loadAllGifts";
 import { resetRandomGiftsComponent } from "./utils/randomGifts";
@@ -11,6 +12,7 @@ if (
 ) {
 	startCTATimer();
 	resetRandomGiftsComponent();
+	addBurgerMenuBtnEventListener();
 }
 
 if (
@@ -20,4 +22,6 @@ if (
 	loadAllGifts();
 	addEventListenersToFilters();
 	addScrollUpButtonEventListener();
+
+	addBurgerMenuBtnEventListener();
 }
