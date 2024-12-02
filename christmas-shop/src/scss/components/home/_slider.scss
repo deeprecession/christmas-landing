@@ -38,10 +38,14 @@
   flex-flow: row nowrap;
   align-items: center;
 
+  position: relative;
+
   gap: 20px;
 
   width: 100%;
   max-width: 1278px;
+
+  transition: left 0.3s ease-in-out;
 }
 
 .slider__text {
@@ -67,7 +71,7 @@
   max-width: 1276px;
 }
 
-.slider-container__control-panel button {
+.slider-container__control-panel>button {
   width: 56px;
   height: 56px;
 
@@ -80,4 +84,21 @@
 
   color: var(--static-white-color);
   background-color: transparent;
+
+  cursor: pointer;
+}
+
+.slider-container__control-panel>button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.slider-container__control-panel>button:hover:disabled {
+  color: var(--static-white-color);
+  background-color: transparent;
+}
+
+.slider-container__control-panel>button:hover {
+  background-color: white;
+  color: var(--primary-color);
 }

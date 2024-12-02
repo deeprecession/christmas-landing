@@ -94,6 +94,10 @@
   gap: 12px;
 }
 
+.gifts__gifts-container>* {
+  cursor: pointer;
+}
+
 @media (max-width: 1315px) {
   .gifts__gifts-container {
     grid-template-columns: repeat(3, 1fr);

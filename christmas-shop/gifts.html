@@ -20,20 +20,40 @@
 
 <body>
   <div class="gifts-page">
-    <header class="main-header">
-      <div class="main-header__titled-logo">
-        <img width="24" height="24" src="/logo.png" alt="logo" />
-        <div>The Gifts</div>
-      </div>
-      <nav class="main-header__site-navigation">
+    <div id="burger-menu-container" class="burger-menu-container">
+      <header class="main-header" id="main-header">
+        <a href="/" class="main-header__logo">
+          <div class="main-header__titled-logo">
+            <img width="24" height="24" src="/logo.png" alt="logo" />
+            <div>The Gifts</div>
+          </div>
+        </a>
+
+        <nav class="main-header__site-navigation" id="header-nav">
+          <ul>
+            <li><a href="/gifts">Gifts</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#random-gifts">Best</a></li>
+            <li><a href="#gift-contacts">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <button class="main-header__burger-menu-btn" id="burger-menu-btn" aria-label="Toggle menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </header>
+
+      <nav class="burger-menu__site-navigation" id="burger-menu">
         <ul>
           <li><a href="/gifts">Gifts</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/best">Best</a></li>
-          <li><a href="/contacts">Contacts</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#random-gifts">Best</a></li>
+          <li><a href="#gift-contacts">Contacts</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
 
     <main class="gifts-page__main-content">
       <header>
@@ -45,81 +65,25 @@
       </header>
 
       <ul class="gifts__filter-panel">
-        <li class="gifts__filter-panel__button-active">all</li>
-        <li class="gifts__filter-panel__button-normal">for work</li>
-        <li class="gifts__filter-panel__button-normal">for health</li>
-        <li class="gifts__filter-panel__button-normal">for harmony</li>
-      </ul>
-
-      <ul class="gifts__gifts-container">
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
+        <li class="gifts__filter-panel__button-active" id="filter-gifts-all">
+          all
         </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
+        <li class="gifts__filter-panel__button-normal" id="filter-gifts-work">
+          for work
         </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
+        <li class="gifts__filter-panel__button-normal" id="filter-gifts-health">
+          for health
         </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
-        </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
-        </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
-        </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
-        </li>
-
-        <li class="gift-card">
-          <img src="/gift-for-harmony.png" alt="gift" />
-          <div class="gift-card__text">
-            <h4 class="gift-card__text__tag-purple">for work</h4>
-            <h3>console log guru</h3>
-          </div>
+        <li class="gifts__filter-panel__button-normal" id="filter-gifts-harmony">
+          for harmony
         </li>
       </ul>
+
+      <ul class="gifts__gifts-container" id="gifts-container"></ul>
     </main>
 
     <footer class="main-footer">
-      <div class="contact-cards-container">
+      <div class="contact-cards-container" id="gift-contacts">
         <div class="contact-card">
           <img height="80" width="80" src="/santa-claus.png" alt="santa" />
           <div class="contact-card__title">+375 (29) 111-22-33</div>
@@ -151,6 +115,10 @@
         <i>Made in Rolling Scopes School</i>
       </div>
     </footer>
+
+    <button id="scrollUpButton" class="bottom-up" style="display: none">
+      <img width="24" height="24" src="/arrow-up.png" alt="arrow" />
+    </button>
   </div>
 
   <script type="module" src="./src/main.js"></script>

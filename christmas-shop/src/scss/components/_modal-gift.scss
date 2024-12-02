@@ -1,0 +1,107 @@
+.modal-gift {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 400px;
+
+  background: #ecf3f8;
+
+  border-radius: 20px;
+
+  z-index: 2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+.modal-gift__img {
+  height: 230px;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.modal-gift__info-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 20px;
+  padding: 20px;
+
+  background-color: white;
+
+  border-radius: 20px;
+}
+
+.modal-gift__close-btn {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+}
+
+.modal-gift__info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 8px;
+}
+
+.modal-gift__superpowers-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 8px;
+}
+
+.modal-gift__superpowers-container * {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.modal-gift__superpower {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+
+  align-items: center;
+}
+
+.modal-gift__superpower__title {
+  width: 100%;
+}
+
+.modal-gift__superpower__points {}
+
+.modal-gift__superpower__stars-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+
+  align-items: center;
+}
+
+.modal-gift__superpower__star {
+  height: 16px;
+  width: 16px;
+}
+
+.modal-gift__info__tag-for-work {
+  color: var(--tag-purple-color);
+}
+
+.modal-gift__info__tag-for-health {
+  color: var(--tag-green-color);
+}
+
+.modal-gift__info__tag-for-harmony {
+  color: var(--tag-pink-color);
+}
