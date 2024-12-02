@@ -3,9 +3,23 @@ export const showGiftModal = (gift) => {
 	document.body.appendChild(modal);
 };
 
+const createOverlay = () => {
+	const overlay = document.createElement("div");
+	overlay.classList.add("overlay");
+
+	overlay.addEventListener("click", () => {
+		overlay.remove();
+	});
+
+	return overlay;
+};
+
 const createGiftModal = (gift) => {
 	const modalGift = document.createElement("div");
 	modalGift.classList.add("modal-gift");
+
+	const overlay = createOverlay();
+	document.body.appendChild(overlay);
 
 	const closeButton = createCloseButton(modalGift);
 	const giftImg = createGiftImage(gift.category);
@@ -15,10 +29,17 @@ const createGiftModal = (gift) => {
 	modalGift.appendChild(giftImg);
 	modalGift.appendChild(infoContainer);
 
+	overlay.addEventListener("click", () => {
+		modalGift.remove();
+	});
+	closeButton.addEventListener("click", () => {
+		overlay.remove();
+	});
+
 	return modalGift;
 };
 
-const createCloseButton = (modalGift) => {
+const createCloseButton = (modalGift, overlay) => {
 	const closeButton = document.createElement("img");
 	closeButton.classList.add("modal-gift__close-btn");
 	closeButton.src = "/close.png";
@@ -26,6 +47,7 @@ const createCloseButton = (modalGift) => {
 
 	closeButton.addEventListener("click", () => {
 		modalGift.remove();
+		overlay.remove();
 	});
 
 	return closeButton;
