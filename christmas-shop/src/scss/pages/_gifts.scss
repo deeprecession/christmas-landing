@@ -17,7 +17,14 @@
   width: 100%;
   height: 100%;
 
+  padding: 60px 0;
+
   gap: 20px;
+
+  background-image: url("/bg-garland.png");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .gifts-page__main-content header {
@@ -26,12 +33,6 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  height: 200px;
-
-  background-image: url("/bg-garland.png");
-  background-size: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .gifts-page__main-content header h1 {
@@ -78,4 +79,35 @@
 
 .gifts__filter-panel__button-normal:hover {
   background-color: var(--static-white-20-color);
+}
+
+.gifts__gifts-container {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (max-width: 1315px) {
+  .gifts__gifts-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .gifts__gifts-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .gifts__gifts-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
