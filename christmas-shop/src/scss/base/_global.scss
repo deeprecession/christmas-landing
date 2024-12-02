@@ -12,13 +12,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   justify-content: center;
+
+  /* width: 1000px; */
 
   overflow-x: hidden;
 }
