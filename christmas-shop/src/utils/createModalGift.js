@@ -47,7 +47,6 @@ const createCloseButton = (modalGift, overlay) => {
 
 	closeButton.addEventListener("click", () => {
 		modalGift.remove();
-		overlay.remove();
 	});
 
 	return closeButton;
