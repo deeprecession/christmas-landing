@@ -39,7 +39,7 @@ const createGiftModal = (gift) => {
 	return modalGift;
 };
 
-const createCloseButton = (modalGift, overlay) => {
+const createCloseButton = (modalGift) => {
 	const closeButton = document.createElement("img");
 	closeButton.classList.add("modal-gift__close-btn");
 	closeButton.src = "/close.png";
