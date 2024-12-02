@@ -1,28 +1,10 @@
-import { createGiftCard } from "./createGiftCard";
-import { fetchGiftsJSON } from "./fetchGiftsJSON";
-
 let curActiveElement = document.getElementById("filter-gifts-all");
 
 export const addEventListenersToFilters = () => {
-	loadAllCards();
-
 	addEventListeter("filter-gifts-all", filterAll);
 	addEventListeter("filter-gifts-work", filterByCategory("work"));
 	addEventListeter("filter-gifts-harmony", filterByCategory("harmony"));
 	addEventListeter("filter-gifts-health", filterByCategory("health"));
-};
-
-const loadAllCards = async () => {
-	const cards = await fetchGiftsJSON();
-
-	const cardsElements = [];
-	cards.map((card) => {
-		const cardElement = createGiftCard(card.name, card.category);
-		cardsElements.push(cardElement);
-	});
-
-	const container = document.getElementById("gifts-container");
-	cardsElements.map((cardElem) => container.appendChild(cardElem));
 };
 
 const addEventListeter = (id, filterCallback) => {
