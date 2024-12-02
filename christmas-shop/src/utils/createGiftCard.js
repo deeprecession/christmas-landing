@@ -10,7 +10,7 @@ const categoryToColor = {
 	"For Harmony": "pink",
 };
 
-export const createGiftCard = (name, category) => {
+export const createGiftCard = ({ name, category }) => {
 	const giftCard = document.createElement("div");
 	giftCard.classList.add("gift-card");
 

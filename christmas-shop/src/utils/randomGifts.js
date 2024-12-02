@@ -1,3 +1,4 @@
+import { createGiftCard } from "./createGiftCard";
 import { fetchGiftsJSON } from "./fetchGiftsJSON";
 
 export const resetRandomGiftsComponent = async () => {
@@ -35,7 +36,7 @@ const createGiftCards = (gifts) => {
 	const giftsEelments = [];
 
 	for (const gift of gifts) {
-		giftsEelments.push(createGiftCards(gift.name, gift.category));
+		giftsEelments.push(createGiftCard(gift));
 	}
 
 	return giftsEelments;

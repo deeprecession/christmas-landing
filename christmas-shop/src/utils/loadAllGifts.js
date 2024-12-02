@@ -7,7 +7,7 @@ export const loadAllGifts = async () => {
 
 	const cardsElements = [];
 	cards.map((card, id) => {
-		const cardElement = createGiftCard(card.name, card.category);
+		const cardElement = createGiftCard(card);
 		cardElement.id = `gift-${id}`;
 		cardsElements.push(cardElement);
 	});
