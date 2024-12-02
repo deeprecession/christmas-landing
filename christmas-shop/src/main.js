@@ -4,6 +4,7 @@ import { addEventListenersToFilters } from "./utils/giftFilters";
 import { loadAllGifts } from "./utils/loadAllGifts";
 import { resetRandomGiftsComponent } from "./utils/randomGifts";
 import { addScrollUpButtonEventListener } from "./utils/scrollUpButton";
+import { addSliderEventListener } from "./utils/slider";
 import { startCTATimer } from "./utils/timer";
 
 if (
@@ -13,6 +14,7 @@ if (
 	startCTATimer();
 	resetRandomGiftsComponent();
 	addBurgerMenuBtnEventListener();
+	addSliderEventListener();
 }
 
 if (
