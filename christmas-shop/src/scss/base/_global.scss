@@ -35,3 +35,8 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+.hidden-scroll {
+  overflow: hidden !important;
+  touch-action: none;
+}
