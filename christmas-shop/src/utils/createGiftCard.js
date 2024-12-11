@@ -1,7 +1,9 @@
+const basepath = "/deeprecession-JSFE2024Q4";
+
 const categoryToImagePath = {
-	"For Work": "/gift-for-work.png",
-	"For Health": "/gift-for-health.png",
-	"For Harmony": "/gift-for-harmony.png",
+	"For Work": basepath + "/gift-for-work.png",
+	"For Health": basepath + "/gift-for-health.png",
+	"For Harmony": basepath + "/gift-for-harmony.png",
 };
 
 const categoryToColor = {

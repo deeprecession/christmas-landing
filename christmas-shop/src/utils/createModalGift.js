@@ -1,5 +1,7 @@
 import { allowScroll, disalowScroll } from "./pageScrollUtils";
 
+const basepath = "/deeprecession-JSFE2024Q4";
+
 export const showGiftModal = (gift) => {
 	const modal = createGiftModal(gift);
 	document.body.appendChild(modal);
@@ -48,7 +50,7 @@ const createGiftModal = (gift) => {
 const createCloseButton = (modalGift) => {
 	const closeButton = document.createElement("img");
 	closeButton.classList.add("modal-gift__close-btn");
-	closeButton.src = "/close.png";
+	closeButton.src = basepath + "/close.png";
 	closeButton.alt = "close";
 
 	closeButton.addEventListener("click", () => {
@@ -61,7 +63,8 @@ const createCloseButton = (modalGift) => {
 const createGiftImage = (category) => {
 	const giftImg = document.createElement("img");
 	giftImg.classList.add("modal-gift__img");
-	giftImg.src = `/gift-${category.toLowerCase().replace(" ", "-")}.png`;
+	giftImg.src =
+		basepath + `/gift-${category.toLowerCase().replace(" ", "-")}.png`;
 	giftImg.alt = "gift";
 
 	return giftImg;
@@ -175,7 +178,8 @@ const createStarsContainer = (points) => {
 		star.classList.add("modal-gift__superpower__star");
 		star.width = 16;
 		star.height = 16;
-		star.src = i < numStars ? "/star.png" : "/star-inactive.png";
+		star.src =
+			i < numStars ? basepath + "/star.png" : basepath + "/star-inactive.png";
 		star.alt = "star";
 		starsContainer.appendChild(star);
 	}

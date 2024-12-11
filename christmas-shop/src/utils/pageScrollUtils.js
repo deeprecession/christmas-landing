@@ -1,9 +1,7 @@
 export const disalowScroll = () => {
-	document.body.style.overflowY = "hidden !important";
-	document.body.style.touchAction = "none";
+	document.documentElement.classList.add("hidden-scroll");
 };
 
 export const allowScroll = () => {
-	document.body.style.overflowY = "visible";
-	document.body.style.touchAction = "auto";
+	document.documentElement.classList.remove("hidden-scroll");
 };

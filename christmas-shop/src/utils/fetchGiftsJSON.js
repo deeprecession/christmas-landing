@@ -1,6 +1,7 @@
 export const fetchGiftsJSON = async () => {
 	try {
-		const response = await fetch("/gifts.json");
+		const basepath = "/deeprecession-JSFE2024Q4/";
+		const response = await fetch(basepath + "/gifts.json");
 		if (!response.ok) {
 			throw new Error("Failed to load gifts JSON");
 		}

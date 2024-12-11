@@ -7,9 +7,15 @@ import { addScrollUpButtonEventListener } from "./utils/scrollUpButton";
 import { addSliderEventListener } from "./utils/slider";
 import { startCTATimer } from "./utils/timer";
 
+const basePath = window.location.pathname.startsWith(
+	"/deeprecession-JSFE2024Q4",
+)
+	? "/deeprecession-JSFE2024Q4"
+	: "";
+
 if (
-	window.location.pathname === "/" ||
-	window.location.pathname === "/index.html"
+	window.location.pathname === `${basePath}/` ||
+	window.location.pathname === `${basePath}/index.html`
 ) {
 	startCTATimer();
 	resetRandomGiftsComponent();
@@ -18,12 +24,11 @@ if (
 }
 
 if (
-	window.location.pathname === "/gifts" ||
-	window.location.pathname === "/gifts.html"
+	window.location.pathname === `${basePath}/gifts` ||
+	window.location.pathname === `${basePath}/gifts.html`
 ) {
 	loadAllGifts();
 	addEventListenersToFilters();
 	addScrollUpButtonEventListener();
-
 	initBurgerMenu();
 }

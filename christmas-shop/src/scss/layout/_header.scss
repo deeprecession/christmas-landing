@@ -24,6 +24,8 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--static-white-color);
+
+  @include action-small-font;
 }
 
 .main-header__logo {
