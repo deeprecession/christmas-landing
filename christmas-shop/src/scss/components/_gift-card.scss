@@ -8,6 +8,14 @@
 
   background: #ecf3f8;
   border-radius: 20px;
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  cursor: pointer;
 }
 
 .gift-card img {
