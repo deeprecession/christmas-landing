@@ -45,4 +45,11 @@
 
   text-align: center;
   text-wrap: nowrap;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+  }
 }
