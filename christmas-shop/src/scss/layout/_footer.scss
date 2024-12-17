@@ -46,6 +46,14 @@
   border-radius: 20px;
 
   background-color: var(--content-background-color);
+
+  cursor: pointer;
+
+  transition: color 0.3s ease-in;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 .contact-card__title {
