@@ -72,6 +72,8 @@
 }
 
 .slider-container__control-panel>button {
+  transition: all 0.3s ease;
+
   width: 56px;
   height: 56px;
 
