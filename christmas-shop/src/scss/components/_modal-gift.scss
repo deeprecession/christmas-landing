@@ -47,6 +47,12 @@
   height: 40px;
 
   cursor: pointer;
+
+  transition: transform 0.3 ease-out;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 .modal-gift__info {
