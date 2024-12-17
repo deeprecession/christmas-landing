@@ -35,6 +35,15 @@
 
   text-align: center;
   text-wrap: nowrap;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+  }
 }
 
 .cta__timer {
