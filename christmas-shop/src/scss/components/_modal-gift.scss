@@ -6,6 +6,8 @@
 
   max-width: 400px;
 
+  width: 100%;
+
   background: #ecf3f8;
 
   border-radius: 20px;
@@ -76,7 +78,7 @@
 }
 
 .modal-gift__superpower__title {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .modal-gift__superpower__points {}
