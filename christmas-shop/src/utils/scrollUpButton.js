@@ -7,7 +7,7 @@ export const addScrollUpButtonEventListener = () => {
 
 	window.addEventListener("scroll", () => {
 		if (window.innerWidth <= 768 && window.scrollY > 300) {
-			button.style.display = "block";
+			button.style.display = "flex";
 		} else {
 			button.style.display = "none";
 		}
@@ -15,7 +15,7 @@ export const addScrollUpButtonEventListener = () => {
 
 	window.addEventListener("resize", () => {
 		if (window.innerWidth <= 768 && window.scrollY > 300) {
-			button.style.display = "block";
+			button.style.display = "flex";
 		} else {
 			button.style.display = "none";
 		}
