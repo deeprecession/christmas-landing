@@ -2,9 +2,9 @@
 
 [Делой на ghpages](https://deeprecession.github.io/christmas-landing/)
 
-![alt-text-2](https://github.com/user-attachments/assets/d8d57fcf-03a3-45e7-8349-2f8e55051be3 "title-2") ![alt-text-1](https://github.com/user-attachments/assets/9117919f-f64e-4a85-b9f2-aa9a207beee3 "title-1") 
-
-
+Gifts страничка          |  Home страничка
+:-------------------------:|:-------------------------:
+![](https://github.com/user-attachments/assets/d8d57fcf-03a3-45e7-8349-2f8e55051be3)  |  ![](https://github.com/user-attachments/assets/9117919f-f64e-4a85-b9f2-aa9a207beee3)
 
 
 ## Основные цели
@@ -14,7 +14,7 @@
 ## Использованые технологии:
 - бандлер Vite
 - CSS предпроцессор SASS (SCSS)
-- интерактивные части сделаны на ванильном js
+- интерактивные части сделаны на ванильном js (слайдер, burger-меню, таймер и др)
 
 ## Как запустить локально:
 ```bash
