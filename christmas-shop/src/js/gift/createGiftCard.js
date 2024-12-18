@@ -1,3 +1,4 @@
+import { showGiftModal } from "./createModalGift";
 import giftForHarmony from "/gift-for-harmony.png";
 import giftForHealth from "/gift-for-health.png";
 import giftForWork from "/gift-for-work.png";
@@ -14,7 +15,9 @@ const categoryToColor = {
 	"For Harmony": "pink",
 };
 
-export const createGiftCard = ({ name, category }) => {
+export const createGiftCard = (card) => {
+	const { name, category } = card;
+
 	const giftCard = document.createElement("div");
 	giftCard.classList.add("gift-card");
 
@@ -39,6 +42,10 @@ export const createGiftCard = ({ name, category }) => {
 
 	giftCard.appendChild(img);
 	giftCard.appendChild(textContainer);
+
+	giftCard.addEventListener("click", () => {
+		showGiftModal(card);
+	});
 
 	return giftCard;
 };

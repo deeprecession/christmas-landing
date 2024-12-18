@@ -1,4 +1,5 @@
 import initBurgerMenu from "./js/burgerMenu/burgerMenu";
+import { addEventListenersToFilters } from "./js/gift/giftFilters";
 import { loadAllGifts } from "./js/gift/loadAllGifts";
 import { resetRandomGiftsComponent } from "./js/gift/randomGifts";
 import { addSliderEventListener } from "./js/home/slider";
@@ -27,7 +28,7 @@ if (
 	window.location.pathname === `${basePath}/gifts.html`
 ) {
 	loadAllGifts();
-	addEventListener();
+	addEventListenersToFilters();
 	addScrollUpButtonEventListener();
 	initBurgerMenu();
 }
