@@ -8,42 +8,6 @@
   letter-spacing: $letter-spacing;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  margin: 0;
-}
-
-h1 {
-  @include heading-styles(32px, 150%, 0.18rem);
-}
-
-h2 {
-  @include heading-styles(24px, 152%, 0.16rem);
-}
-
-h3 {
-  @include heading-styles(16px, 152%, 0.08rem);
-}
-
-h4 {
-  @include heading-styles(12px, 130%, 0.05rem);
-}
-
-p {
-  font-size: 16px;
-  font-weight: var(--font-weight-regular);
-  line-height: 148%;
-}
-
-a {
-  color: var(--dark-color);
-  text-decoration: none;
-}
-
 @mixin action-lagre-font {
   @include heading-styles(24px, 152%, 0.16rem);
 }
@@ -58,10 +22,6 @@ a {
   font-weight: var(--font-weight-regular);
   line-height: 100%;
   letter-spacing: 0.05rem;
-}
-
-i {
-  @include caption-font;
 }
 
 @mixin slider-text-font {

@@ -1,3 +1,5 @@
+@use "./typography" as *;
+
 :root {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
@@ -24,8 +26,6 @@ body {
   min-height: 100vh;
   justify-content: center;
 
-  /* width: 1000px; */
-
   overflow-x: hidden;
 }
 
@@ -38,4 +38,35 @@ body {
 .hidden-scroll {
   overflow: hidden !important;
   touch-action: none;
+}
+
+i {
+  @include caption-font;
+}
+
+h1 {
+  @include heading-styles(32px, 150%, 0.18rem);
+}
+
+h2 {
+  @include heading-styles(24px, 152%, 0.16rem);
+}
+
+h3 {
+  @include heading-styles(16px, 152%, 0.08rem);
+}
+
+h4 {
+  @include heading-styles(12px, 130%, 0.05rem);
+}
+
+p {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  line-height: 148%;
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
 }
