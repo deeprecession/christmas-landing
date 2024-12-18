@@ -1,6 +1,17 @@
 import { allowScroll, disalowScroll } from "./pageScrollUtils";
 
-const basepath = "/deeprecession-JSFE2024Q4";
+import closePng from "/close.png";
+import starActive from "/star.png";
+import starInactive from "/star-inactive.png";
+import giftForHarmony from "/gift-for-harmony.png";
+import giftForHealth from "/gift-for-health.png";
+import giftForWork from "/gift-for-health.png";
+
+const categoryToImagePath = {
+	"For Work": giftForWork,
+	"For Health": giftForHealth,
+	"For Harmony": giftForHarmony,
+};
 
 export const showGiftModal = (gift) => {
 	const modal = createGiftModal(gift);
@@ -50,7 +61,7 @@ const createGiftModal = (gift) => {
 const createCloseButton = (modalGift) => {
 	const closeButton = document.createElement("img");
 	closeButton.classList.add("modal-gift__close-btn");
-	closeButton.src = basepath + "/close.png";
+	closeButton.src = closePng;
 	closeButton.alt = "close";
 
 	closeButton.addEventListener("click", () => {
@@ -63,8 +74,7 @@ const createCloseButton = (modalGift) => {
 const createGiftImage = (category) => {
 	const giftImg = document.createElement("img");
 	giftImg.classList.add("modal-gift__img");
-	giftImg.src =
-		basepath + `/gift-${category.toLowerCase().replace(" ", "-")}.png`;
+	giftImg.src = categoryToImagePath[category];
 	giftImg.alt = "gift";
 
 	return giftImg;
@@ -178,8 +188,7 @@ const createStarsContainer = (points) => {
 		star.classList.add("modal-gift__superpower__star");
 		star.width = 16;
 		star.height = 16;
-		star.src =
-			i < numStars ? basepath + "/star.png" : basepath + "/star-inactive.png";
+		star.src = i < numStars ? starActive : starInactive;
 		star.alt = "star";
 		starsContainer.appendChild(star);
 	}

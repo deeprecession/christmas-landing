@@ -6,8 +6,6 @@ export const resetRandomGiftsComponent = async () => {
 
 	const randomGifts = popRandomN(allGifts, 4);
 
-	console.log(randomGifts);
-
 	updateComponent(randomGifts);
 };
 
