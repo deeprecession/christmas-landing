@@ -1,6 +1,6 @@
 import giftForHarmony from "/gift-for-harmony.png";
 import giftForHealth from "/gift-for-health.png";
-import giftForWork from "/gift-for-health.png";
+import giftForWork from "/gift-for-work.png";
 
 const categoryToImagePath = {
 	"For Work": giftForWork,
