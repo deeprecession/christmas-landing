@@ -1,4 +1,4 @@
-import { allowScroll, disalowScroll } from "./pageScrollUtils";
+import { allowScroll, disalowScroll } from "../pageScrollUtils";
 
 const initBurgerMenu = () => {
 	const burgerMenuBtn = document.getElementById("burger-menu-btn");

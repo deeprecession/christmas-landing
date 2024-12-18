@@ -1,4 +1,4 @@
-import { allowScroll, disalowScroll } from "./pageScrollUtils";
+import { allowScroll, disalowScroll } from "../pageScrollUtils";
 
 import closePng from "/close.png";
 import starActive from "/star.png";

@@ -1,11 +1,10 @@
+import initBurgerMenu from "./js/burgerMenu/burgerMenu";
+import { loadAllGifts } from "./js/gift/loadAllGifts";
+import { resetRandomGiftsComponent } from "./js/gift/randomGifts";
+import { addSliderEventListener } from "./js/home/slider";
+import { startCTATimer } from "./js/home/timer";
+import { addScrollUpButtonEventListener } from "./js/scrollUp/scrollUpButton";
 import "./scss/main.scss";
-import initBurgerMenu from "./utils/burgerMenu";
-import { addEventListenersToFilters } from "./utils/giftFilters";
-import { loadAllGifts } from "./utils/loadAllGifts";
-import { resetRandomGiftsComponent } from "./utils/randomGifts";
-import { addScrollUpButtonEventListener } from "./utils/scrollUpButton";
-import { addSliderEventListener } from "./utils/slider";
-import { startCTATimer } from "./utils/timer";
 
 const basePath = window.location.pathname.startsWith(
 	"/deeprecession-JSFE2024Q4",
@@ -28,7 +27,7 @@ if (
 	window.location.pathname === `${basePath}/gifts.html`
 ) {
 	loadAllGifts();
-	addEventListenersToFilters();
+	addEventListener();
 	addScrollUpButtonEventListener();
 	initBurgerMenu();
 }
