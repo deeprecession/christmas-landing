@@ -74,6 +74,10 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+
+  object {
+    pointer-events: none;
+  }
 }
 
 @container contact-cards (width < 1200px) {
