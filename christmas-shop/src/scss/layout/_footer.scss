@@ -80,6 +80,35 @@
   }
 }
 
+.icon-telegram {
+  mask: url("/telegram.svg");
+}
+
+.icon-X {
+  mask: url("/X.svg");
+}
+
+.icon-facebook {
+  mask: url("/facebook.svg");
+}
+
+.icon-instagram {
+  mask: url("/instagram.svg");
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: var(--dark-color);
+  mask-size: cover;
+}
+
+.icon:hover,
+.icon:focus {
+  background: var(--primary-color);
+}
+
 @container contact-cards (width < 1200px) {
   .contact-cards-container {
     display: grid;
