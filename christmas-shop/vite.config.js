@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    base: "/deeprecession-JSFE2024Q4/",
+    base: "/christmas-landing/",
     build: {
         rollupOptions: {
             input: {

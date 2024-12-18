@@ -7,26 +7,20 @@ import { startCTATimer } from "./js/home/timer";
 import { addScrollUpButtonEventListener } from "./js/scrollUp/scrollUpButton";
 import "./scss/main.scss";
 
-const basePath = window.location.pathname.startsWith(
-	"/deeprecession-JSFE2024Q4",
-)
-	? "/deeprecession-JSFE2024Q4"
+const basePath = window.location.pathname.startsWith("/christmas-landing/")
+	? "/christmas-landing"
 	: "";
 
-if (
-	window.location.pathname === `${basePath}/` ||
-	window.location.pathname === `${basePath}/index.html`
-) {
+const pathname = window.location.pathname;
+
+if ([`${basePath}/`, `${basePath}/index.html`].includes(pathname)) {
 	startCTATimer();
 	resetRandomGiftsComponent();
 	initBurgerMenu();
 	addSliderEventListener();
 }
 
-if (
-	window.location.pathname === `${basePath}/gifts` ||
-	window.location.pathname === `${basePath}/gifts.html`
-) {
+if ([`${basePath}/gifts`, `${basePath}/gifts.html`].includes(pathname)) {
 	loadAllGifts();
 	addEventListenersToFilters();
 	addScrollUpButtonEventListener();
