@@ -3,8 +3,6 @@
 .burger-menu-container {
   @include action-small-font;
 
-  background-color: #fff;
-
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -14,7 +12,7 @@
   @export .burger-menu-container;
 
   height: 100vh;
-  position: fixed;
+  position: relative;
 }
 
 .main-header {
@@ -105,21 +103,20 @@
 }
 
 .burger-menu__site-navigation {
-  display: none;
-
   height: 100%;
+  width: 20vw;
+  display: flex;
+  visibility: hidden;
 
   background-color: #fff;
 
   justify-content: center;
   align-items: center;
 
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 0;
+  position: absolute;
+  top: 50px;
 
-  transform: translateX(-100%);
+  left: 100vw;
   transition: all 0.3s ease-out;
 
   ul {
@@ -148,12 +145,10 @@
 
 .burger-menu__site-navigation-opened {
   @extend .burger-menu__site-navigation;
-  display: flex;
+  visibility: visible;
 
-  width: 100%;
-
-  transform: translateX(0);
-  /* Slide the menu into view */
+  left: 0;
+  width: 100vw;
 }
 
 // Responsive styles
